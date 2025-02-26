@@ -1,0 +1,35 @@
+<!-- views/companytasks.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Company Tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="companyTitle">Tasks for:</h1>
+    <div id="inputContainer">
+      <input
+        type="text"
+        id="taskDescription"
+        placeholder="Enter task description"
+      />
+      <input type="date" id="taskDueDate" />
+      <select id="repeatDays">
+        <option value="">No Repeat</option>
+        <option value="1">1 Day</option>
+        <option value="7">1 Week</option>
+        <option value="30">1 Month</option>
+      </select>
+      <div class="taskButtonsContainer">
+        <button id="saveButton" class="taskButton">Save</button>
+        <button id="closeButton" class="taskButton">Close</button>
+      </div>
+    </div>
+    <div id="companyTaskList">
+      <p>Loading tasks...</p>
+    </div>
+    <!-- Include the company tasks renderer script -->
+    <script src="../companyTasksRenderer.js"></script>
+  </body>
+</html>
